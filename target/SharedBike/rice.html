@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>水稻飞虱web端</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/viewer.css">
+  <style>
+    .pictures {
+      list-style: none;
+      margin: 0;
+      max-width: 30rem;
+      padding: 0;
+    }
+
+    .pictures > li {
+      border: 1px solid transparent;
+      float: left;
+      height: calc(100% / 3);
+      margin: 0 -1px -1px 0;
+      overflow: hidden;
+      width: calc(100% / 3);
+    }
+
+    .pictures > li > img {
+      cursor: zoom-in;
+      width: 100%;
+    }
+    body {
+      padding-top: 0px;
+    }
+    #main {
+      margin: auto;
+      text-align: match-parent;
+      /* width: 300px;
+      height: 200px;
+      background-color: #ffffff;   */
+    }
+    #show_time0 {
+      width:300px;
+      height:100px;
+      color: #000000;
+    }
+  </style>
+</head>
+<!--<body>-->
+<!--<div id="main">-->
+<!--  <div id="show_time0" style = "">-->
+<!--    <script>-->
+<!--      setInterval("show_time0.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);-->
+<!--    </script>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</body>-->
+<body>
+  <div class="container">
+    <h1>查看水稻详情</h1>
+    <div id="galley">
+      <ul class="pictures">
+        <li><img data-original="../image/tibet-1.jpg" src="https://ima01.oss-cn-shanghai.aliyuncs.com/tibet-1.jpg" alt="Cuo Na Lake"></li>
+        <li><img data-original="../image/tibet-2.jpg" src="https://ima01.oss-cn-shanghai.aliyuncs.com/tibet-2.jpg" alt="Tibetan Plateau"></li>
+        <li><img data-original="../image/tibet-3.jpg" src="https://ima01.oss-cn-shanghai.aliyuncs.com/tibet-3.jpg" alt="Jokhang Temple"></li>
+        <li><img data-original="../image/tibet-4.jpg" src="https://ima01.oss-cn-shanghai.aliyuncs.com/tibet-4.jpg" alt="Potala Palace 1"></li>
+<!--        <li><img data-original="../image/tibet-5.jpg" src="https://ima01.oss-cn-shanghai.aliyuncs.com/tibet-5.jpg" alt="Potala Palace 2"></li>-->
+<!--        <li><img data-original="../image/tibet-6.jpg" src="https://ima01.oss-cn-shanghai.aliyuncs.com/tibet-6.jpg" alt="Potala Palace 3"></li>-->
+<!--        <li><img data-original="../image/tibet-7.jpg" src="https://ima01.oss-cn-shanghai.aliyuncs.com/tibet-7.jpg" alt="Lhasa River"></li>-->
+        <li><img data-original="../image/tibet-8.jpg" src="https://ima01.oss-cn-shanghai.aliyuncs.com/tibet-8.jpg" alt="Namtso 1"></li>
+        <li><img data-original="../image/tibet-9.jpg" src="https://ima01.oss-cn-shanghai.aliyuncs.com/tibet-9.jpg" alt="Namtso 2"></li>
+        <li><img data-original="../image/tibet-10.jpg" src="../image/thumbnails/tibet-10.jpg" alt="test01"></li>
+        <li><img data-original="../image/tibet-11.jpg" src="../image/thumbnails/tibet-11.jpg" alt="test02"></li>
+        <li><img data-original="../image/tibet-12.jpg" src="../image/thumbnails/tibet-12.jpg" alt="test03"></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="../js/viewer.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      var galley = document.getElementById('galley');
+      var viewer = new Viewer(galley, {
+        url: 'data-original',
+        title: function (image) {
+          return image.alt + ' (' + (this.index + 1) + '/' + this.length + ')';
+        },
+      });
+    });
+  </script>
+  <div id="main">
+    <div id="show_time0" style = "">
+      <script>
+        setInterval("show_time0.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+      </script>
+    </div>
+  </div>
+</body>
+</html>
