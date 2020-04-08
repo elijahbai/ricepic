@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SharedBike" />
         <module name="SharedBike1.2" />
+        <module name="SharedBike" />
       </profile>
     </annotationProcessing>
   </component>
