@@ -24,8 +24,8 @@ public class OSSClientUtil {
     // endpoint以杭州为例，其它region请按实际情况填写
     private String endpoint = "oss-cn-shanghai";
     // accessKey
-    private String accessKeyId = "LTAI4Fbxessw69nuG6tJM5MK";
-    private String accessKeySecret = "naR4Uk6TLqkWdQ3p4xaHQDVNo01ygg";
+    private String accessKeyId = "";
+    private String accessKeySecret = "";
     //空间
     private String bucketName = "ima01";
     //文件存储目录
