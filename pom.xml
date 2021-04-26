@@ -28,7 +28,7 @@
         <jjwt.version>0.9.1</jjwt.version>
         <jwt.version>3.4.0</jwt.version>
         <fileupload.version>1.4</fileupload.version>
-        <io.version>2.2</io.version>
+        <io.version>2.7</io.version>
         <jsoup.version>1.11.3</jsoup.version>
         <poi.version>3.17</poi.version>
         <codec.version>1.10</codec.version>
